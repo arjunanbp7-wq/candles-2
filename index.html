@@ -1,0 +1,676 @@
+
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Tipsy Flames Candle Collection</title>
+
+      
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+      body{
+        font-family: 'popins',sans-serif;
+        color: #2c2c2c;
+      }
+        .top-bar{
+            
+            background-color: green;
+            color: white;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+
+        }
+
+        .logo-section{
+          padding: 20px 0;
+          background-color: #fff;
+        }
+
+        .logo-section img{
+          height: 70px;
+        }
+
+
+      
+        .nav-link:hover{
+          color: #0b5e2b;
+        }
+
+        .navbar-icons i{
+          cursor: pointer;
+          color: #333;
+          transition: color 0.3s;
+
+        }
+        .navbar-icons i:hover{
+          color: #0b5e2b;
+        }
+
+
+        .hero-section{
+          height:105vh;
+          background:
+          linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+          url("webpage.webp");
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          color: #fff;
+          margin-bottom:55px;
+        }
+        
+        .hero-section h1{
+          font-family: 'playfair Display',serif;
+          font-size: 3.5rem;
+          font-weight: 600;
+        }
+        .hero-section p{
+          font-size: 1.1rem;
+          letter-spacing: 1px;
+          margin-bottom: 25px;
+        }
+
+        .btn-candle{
+          background-color: #0b5e2b;
+          color: #fff;
+          padding: 12px 28px;
+          border-radius: 30px;
+          font-size: 14px;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+        }
+
+        .btn-candle:hover {
+          background-color: #084c22;
+          color: #fff;
+        
+          }
+
+          @media(max-width:576px){
+          .logo-section img{
+            height: 50px;
+          }}
+           
+        
+      /*PROMOSECTION*/
+
+      .promo-section{
+        padding: 60px 0;
+        background-color: #fff;
+      }
+
+      .promo-box{
+        background-color: #0b5e2b;
+        border-radius: 25px;
+        padding: 50px 60px;
+        color: #fff;
+      }
+
+      .promo-text small{
+        color: #d4af37;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+
+      .promo-text h2{
+        font-family: 'playfair Display',serif;
+        font-size: 2.1rem;
+        margin-top: 15px;
+        line-height: 1.4;
+      }
+
+      .promo-text span{
+        font-weight: 700;
+      }
+
+      .btn-visit{
+        background-color: #d4af37;
+        color: #fff;
+        padding: 14px 30px;
+        border-radius: 40px;
+        font-weight: 500;
+        white-space: nowrap;
+        
+      }
+
+      .btn-visit:hover{
+        background-color: #c9a227;
+        color: #fff;
+      }
+
+      @media(max-width:768px){
+        .promo-box{
+          padding: 35px 25px;
+          text-align: center;
+        }
+        .promo-text h2{
+          font-size: 1.6rem;
+        }}
+
+      <!--FRAGRANCE SECTION-->
+    
+    .fragrance-section{
+    padding:70px 0;
+    background-color: #fff;
+    }
+
+   .section-title{
+    font-family:'playfair Display',serif;
+    font-size: 2.4rem;
+    margin-bottom: 60px;
+   }
+
+   .fragrance-card{
+    position: relative;
+    border-radius: 30px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    min-height: 420px;
+    transition: transform 0.45s ease, box-shadow 0.45s ease;
+   }
+
+   .small-card{
+    min-height: 200px;
+    
+   }
+
+   .fragrance-card::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+   }
+
+   .fragrance-card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 30px 60px rgba(11,94,43,0.45);
+   }
+
+   .fragrance-content{
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    padding: 35px;
+    color:#fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.4s ease;
+   }
+
+  .fragrance-card:hover .fragrance-content{
+    transform: translateY(-10px);
+  } 
+
+  .fragrance-content h3{
+    font-family:'playfair Display',serif;
+    font-size: 1.8rem;
+    margin-bottom:10px
+  }
+
+  .fragrance-content p{
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .fragrance-content .btn{
+    width:fit-content;
+    border-radius: 30px;
+    padding: 10px 25px;
+    color: #fff;
+    background-color: #084c22;
+    margin-top: auto;
+  }
+
+  /*HERITAGE SECTION*/
+   
+  .heritage-section{
+    padding: 80px 0;
+    background-color:#fff;
+  
+  }
+
+  /*Viewport (hides overflow)*/
+
+
+  .heritage-viewport{
+    overflow: hidden;
+    
+  }
+
+  /*Track Moves Sideways*/
+
+  .heritage-track{
+    display: flex;
+    gap: 30px;
+    transition: transform 0.5s ease;
+  }
+ 
+  /*CARD*/
+
+  .heritage-card{
+    min-width: 260px;
+    height: 190px;
+    border-radius: 25px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: transform 0.3s ease;
+    }
+
+  /*Hover Lift*/
+  .heritage-card:hover{
+    transform: translateY(-15px);
+  }
+
+
+ /* OVERLAY*/
+   
+  .heritage-card::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,rgba(0,0,0,0.5),transparent);
+    border-radius: 25px;
+
+  }
+/*TITLE*/
+.heritage-title{
+  font-family: 'Playfair Display',serif;
+  text-align: center;
+  margin: 50px auto 25px;
+  width: 100%;
+}
+  /*TEXT*/
+  
+  .heritage-card h4{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color:#fff;
+    font-family: 'Playfair Display',serif;
+    z-index: 2;
+  }
+
+
+
+
+   /* ARROW BUTTONS*/
+  .heritage-buttons{
+    position: absolute;
+    right:0;
+    top: -110px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 20;
+  }
+
+
+   .slider-btn{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid#0b5e2b;
+    background: #fff;
+    color: #0b5e2b;
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s ease;
+   }
+
+
+   .slider-btn:hover{
+    background: #0b5e2b;
+    color: #fff;
+   }
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+    </head>
+    <body>
+    <!--TOPBAR-->
+   <div class="top-bar text-center py-2">
+     Due to festive season , all new orders will be dispatched from  Thursday onwards.
+   </div>
+
+    <!--LOGO-->
+    <div class="logo-section text-center">
+      <a href="#">
+        <img src="taracandles.avif" alt="Tara candles logo">
+      </a>
+    </div>
+
+    <!--NAVBAR-->
+   <nav class="navbar  navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+   <div class="container">
+
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="mainnav">
+     <span class="navbar-toggler-icon"></span>
+    </button>
+            
+    <div class="collapse navbar-collapse " id="mainnav">
+    
+    <!--MENU-->
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+
+    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Tipsy Flames Collection</a></li>
+
+    <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Shop candles</a>
+    <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Soy Candles</a></li>
+    <li><a class="dropdown-item" href="#">Jar Candles</a></li>
+    </ul>
+    </li>
+
+    <li class="nav-item"><a class="nav-link" href="#">Aroma Bars</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Gifting Collection</a></li>
+
+    <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Accesories</a>
+                            
+                            
+    <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Candle Holders</a></li>
+    <li><a class="dropdown-item" href="#">Wick Trimmers</a></li>
+    </ul>
+    </li>
+
+    <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" role="button" aria-expanded="false">About Us</a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Our Story</a></li>
+      <li><a class="dropdown-item" href="#">Team</a></li>
+    </ul>
+    </li>
+
+
+    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+    </ul>
+
+
+    <!--ICONS-->
+    
+    <div class="navbar-icons d-flex gap-3">
+     <i class="bi bi-search fs-5"></i>
+     <i class="bi bi-person fs-5"></i>
+     <i class="bi bi-heart  fs-5"></i>
+     <i class="bi bi-cart  fs-5"></i>
+    </div>
+
+  </div>
+  </div>
+  </nav>
+
+ <!--HERO SECTION-->
+
+  <section class="hero-section">
+  <div>
+  <h1>Luxury Hand-Poured Candles</h1>
+  <p>Warm * Cozy * Elegant</p>
+  <a href="#" class="btn btn-candle">Shop Now</a>
+  </div>
+  </section>
+
+  <!--PROMOSECTION-->
+
+  <section class="promo-section">
+    <div class="container">
+      <div class="promo-box d-flex flex-column flex-lg-row align-items-center justify-content-between">
+        
+         <div class="promo-text">
+          <small>WELCOME TO TARAHOME</small>
+          <h2>To purchase our products, please visit our new store at<br>
+          <span>wwww.tarahome.in</span>
+         </h2>
+         </div>
+
+         <div class="promo-btn mt-4 mt-lg-0">
+          <a href="https://www.tarahom.in" class="btn btn-visit">
+            Visit Our New Store > 
+          </a>
+         </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--FRAGRANCE SECTION-->
+
+  <section class="fragrance-section">
+    <div class="container">
+      <h2 class="section-title text-center">
+        Experience Our Unique Fragrances
+      </h2>
+      <div class="row g-4">
+
+       <!--Fragrance by mood-->
+       
+       <div class="col-lg-4 card-mb-3 text-center">
+        <div class="fragrance-card" style="background-image: url(webpage1..webp);">
+          <div class="fragrance-content">
+            <h3>Fragrance by Mood</h3>
+            <p>Transform any space with mood-enhancing candles,
+              from calming lavender to energizing citrus.
+            </p>
+
+            <a href="#" class="btn btn-light card-mb-3 ">Shop Now</a>
+          </div>
+        </div>
+       </div>
+    <!--MIDDLE CARDS-->
+
+    <div class="col-lg-4 d-flex flex-column gap-4">
+
+      <div class="fragrance-card small-card " style="background-image: url(webpage2.webp);">
+        <div class="fragrance-content text-center">
+          <h3>New Arrivals</h3>
+          <p>Discover Our Latest Handcrafted Candle Creations .</p>
+          <a href="#" class="btn btn-light">Shop Now</a>
+        </div>
+      </div>
+    
+      <div class="fragrance-card small-card" style="background-image: url(webpage3.webp)";>
+      <div class="fragrance-content text-center">
+        <h3>Collection</h3>
+        <p>Elegant Candles for Every mood and Occassion.</p>
+        <a href="#" class="btn btn-light">Shop Now</a>
+      </div>
+      </div>
+
+      </div>
+
+      <!--FRAGRANCE BY ROOM-->
+
+      <div class="col-lg-4 card-mb-3 text-center">
+        <div class="fragrance-card" style="background-image: url(webpage4.webp);">
+          <div class="fragrance-content">
+            <h3>Fragrance by Room</h3>
+            <p>Curated fragrances designed to elevate every rrom with warmth and elegance.</p>
+            <a href="#" class="btn btn-light">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      </div>
+      </div>
+      </section>
+
+    <!--HERITAGE COLLECTION SECTION-->
+
+    <section class="heritage-section">
+      <div class="container position-relative heritage-slider">
+
+        <!--ARROWS-->
+        <div class="heritage-buttons"> 
+       <button class="slider-btn " id="heritagePrev">&#10094;</button>
+       <button class="slider-btn " id="heritageNext">&#10095;</button> 
+       </div>
+
+<!--VIEWPORT-->
+
+<div class="heritage-viewport">
+  <div class="heritage-track" id="heritageTrack">
+
+  
+
+          <div class="heritage-card" style="background-image: url(flavoursof.webp);">
+            <h4>Flavours of India</h4>
+        </div>
+
+       <div class="heritage-card" style="background-image: url(flowers.webp);">
+        <h4>Flowers of India</h4>
+       </div>
+
+       <div class="heritage-card" style="background-image: url(ogfruits.webp);">
+        <h4>Fruits of India</h4>
+       </div>
+
+       <div class="heritage-card" style="background-image: url(mithas.webp);">
+        <h4>Mithas of India</h4>
+       </div>
+
+       <div class="heritage-card" style="background-image: url(wellness.webp);">
+        <h4>Wellness of India</h4>
+       </div>
+    
+       <!--ADD MORE CARDS BELOW-->
+       </div>
+       </div>
+
+      <h2 class="heritage-title">Heritage of India Collection</h2>
+
+      <div class="text-center">
+        <a href="#" class="btn btn-success heritage-btn">
+          View All Collections
+        </a>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+ <script>
+  const track=document.getElementById("heritageTrack");
+  const originalCards=Array.from(track.children);
+  
+  const cardwidth=260;
+  const gap=30;
+  const totalCards=originalCards.length;
+  
+
+  originalCards.forEach(card=>track.appendChild(card.cloneNode(true)));
+  originalCards.forEach(card=>track.appendChild(card.cloneNode(true)));
+
+  const loopWidth=(cardwidth+gap)*totalCards;
+  let currentposition=-loopWidth;
+  track.style.transform=`translateX(${currentposition}px)`;
+
+  function slideNext() {
+    currentposition-=(cardwidth+gap);
+  track.style.transition="transform 0.5s ease";
+  track.style.transform=`translateX(${currentposition}px`;
+
+ if (Math.abs(currentposition)>=loopWidth*2){
+  setTimeout(()=>{
+    track.style.transition="none";
+    currentposition=-loopWidth;
+    track.style.transform=`translateX(${currentposition}px)`;
+  },500);
+ } 
+  
+ restartAutoplay();
+}
+
+function slidePrev() {
+  currentposition+=(cardwidth+gap);
+  track.style.transition="transform 0.5s ease";
+  track.style.transform=`translateX(${currentposition}px)`;
+
+  if (currentposition>=0) {
+    setTimeout(()=>{
+      track.style.transition="none";
+      currentposition=-loopWidth+(cardwidth+gap);
+      track.style.transform=`translateX(${currentposition}px)`;
+    },500);
+  }
+  restartAutoplay();
+}
+
+
+document.getElementById("heritageNext").onclick=slideNext;
+document.getElementById("heritagePrev").onclick=slidePrev;
+
+let autoplay=setInterval(slideNext,3000);
+function restartAutoplay(){
+  clearInterval(autoplay);
+  autoplay=setInterval(slideNext,3000);
+}
+</script>
+</body>
+</html>
