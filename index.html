@@ -10,8 +10,11 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"  rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <style>
+  
+  <style>
       body{
         font-family: 'popins',sans-serif;
         color: #2c2c2c;
@@ -338,20 +341,336 @@
     background: #0b5e2b;
     color: #fff;
    }
+
+   /*STORY SECTION*/
+
+   .our-journey-img{
+    transition: transform 0.4s ease;
+   }
+
+   .our-journey-img:hover{
+    transform: scale(1.05);
+   }
    
+   .featured-section{
+    width: 100%;
+    padding: 40px 0;
+   }
+
+   .featured-heading{
+    text-align: center;
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 30px;
+   }
+
+   .swiper{
+    width: 100%;
+    padding-bottom: 40px;
+   }
+
+   .product-card{
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.8);
+    transition: transform .3s ease;
+   }
+
+   .product-card:hover{
+    transform: translateY(-6px);
+   }
+
+   .product-card img{
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+   }
+
+   .product-content{
+    padding: 18px;
+   }
+
+   .category{
+    font-size: 12px;
+    color: #777;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+   }
+
+   .product-title{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3rem;
+   }
+
+   /*BUTTONS*/
+   .swiper-button-next,
+   .swiper-button-prev{
+color: #000;
+background: #fff;
+width: 45px;
+height: 45px;
+border-radius: 50%;
+box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after{
+  font-size: 18px;
+  font-weight: bold;
+}
+/* UNIQUE SECTION */
+
+.unique-section{
+  width: 100%;
+  background: #f4f0e7;
+  padding: 60px 40px;
+  border-radius: 25px;
+  margin-top: 60px;
+}
+.unique-conatiner{
+  text-align: center;
+  max-width: 1100px;
+  margin: auto;
+}
+.unique-subtitle{
+  font-size: 16px;
+  color: #c7a64e;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.unique-title{
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #333;
+}
+.unique-text{
+  font-size: 18px;
+  max-width: 750px;
+  margin: 0 auto 40px auto;
+  color: #555;
+}
+
+
+.unique-features{
+  display: flex;
+  justify-content:space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 0 20px;
+  
+}
+
+.feature-item{
+  text-align: center;
+  flex:1 1 150px;
+}
+
+.feature-item img{
+  width: 85px;
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+ 
+.feature-item:hover img{
+  transform: scale(1.15);
+  filter: brightness(1.3);
+}
+
+.feature-item h5{
+  margin-top: 12px;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+
+/*FAQ SECTION*/
+
+.faq-wrapper{
+  background: #f3eddf;
+  border-radius: 25px;
+  margin-top: 60px;
+}
+
+.faq-title{
+  font-family: "playfair Display",serif;
+  font-size: 2.6rem;
+}
+
+.faq-heading{
+  font-family: "palyfair Display",serif;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.custom-accordion .faq-item{
+  background: #fff;
+  border-radius: 18px;
+  padding: 18px 22px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.faq-question{
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0b5e2b;
+  cursor: pointer;
+}
+
+.faq-question i.fa-circle-check{
+  color: #0b5e2b;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.toggle-icon{
+  color: #0b5e2b;
+  font-size: 1.4rem;
+  transition: transform 0.6s ease; /*, color 0.3s ease; */
+  font-weight: 700;
+}
+
+.toggle-icon.rotate{
+  transform: rotate(180deg);
+}
 
 
 
+.faq-answer{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+  color: #444;
+  line-height: 1.6;
+}
+
+.faq-answer.show{
+  max-height: 500px;
+}
+
+/*FEATURE STRIP */
+
+.feature-strip {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 20px;
+  background: #ffff;
+  flex-wrap: wrap;
+}
+
+.fs-item {
+  display: flex;
+  align-items: center;
+  max-width: 300px;
+  padding: 15px;
+}
+
+.fs-item img {
+  width: 55px;
+  margin-right: 15px;
+}
+
+.fs-item h4{
+  margin: 0;
+  font-size: 20px;
+  color: #0b4b2f;
+}
+
+.fs-item p{
+  margin: 0;
+  color: #666;
+}
+
+/*GREEN FOOTER*/
+
+.green-footer {
+   background:#0b5e2b;
+  width: 100vw;
+   color: white;
+   padding:60px 30px 80px; 
+   position: relative; 
+   margin-top: 60px;
+  border-radius: 0;
+  margin-left: 0;
+  margin-right: 0;  
+  padding: 100px 0;
+} 
+
+.gf-container {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+  
+}
+
+.gf-logo img{
+  width: 180px ;
+
+}
+.gf-col {
+  min-width: 220px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.gf-col a {
+  color: white;
+  text-decoration: none;
+  margin: 6px 0;
+}
+
+.gf-social img{
+  width: 35px;
+  margin-right: 10px;
+}
 
 
 
+/*WHATSAPP */
 
+.footer-whatsapp {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+}
 
+.footer-whatsapp img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
 
+/*Bulk Order Button*/
 
-
-
-
+.bulk-order-stick {
+  position: fixed;
+  top: 40%;
+  right: 0;
+  background: #0b4b2f;
+  color: white;
+  padding: 20px 12px;
+  writing-mode: vertical-rl;
+  font-weight: bold;
+  border-radius: 12px 0 0 12px;
+  cursor: pointer;
+  z-index: 9999;
+}
 
 
 
@@ -584,6 +903,534 @@
       </div>
 
 
+      <!--LITTLE JOURNEY SECTION-->
+
+      <section class="our-journey-section py-5">
+        <div class="container">
+          <div class="row align-items-center g-4">
+
+            <div class="col-lg-6">
+              <img src="littlestory.jpg" alt="Our Little Story"
+              class="img-fluid rounded-4 shadow our-journey-img">
+            </div>
+
+            <div class="col-lg-6">
+              <small class="text-uppercase" style="color: #d4af37; letter-spacing: 1px;">
+                A LITTLE STORY ABOUT US
+              </small>
+
+<h2 class="mt-2" style="font-family:'Playfair Display',serif;font-size: 2.2rem">
+  Our Journey
+</h2>
+
+<p style="font-size: 1rem; line-height: 1.7;">
+  From humble begininngs to becoming Asia's largest candle producer,
+  accounting for 65 percent of the market share for candle supply in the corporate segment , pan India. 
+</p>
+<p style="font-size: 1rem; line-height: 1.7;">
+  Tara candles was established in 2005 by a husband-wife duo,producing 10kg of candles per day for a single client in the Mumbai region. 
+</p>
+ 
+<a href="#" class="btn btn-success px-4 py-2 rounded-pill">
+  Read more->
+</a>
+</div>
+
+
+
+  </div>
+  </div>
+  </section>
+
+
+  <section class="featured-section">
+    <h2 class="featured-heading">Featured Products</h2>
+
+    <div class="swiper myFeaturedSwiper">
+      <div class="swiper-wrapper">
+<!--pro1-->
+        <div class="swiper-slide">
+          <div class="product-card">
+            <img src="product1.jpg" alt="">
+            <div class="product-content">
+              <div class="category">CELEBRATION</div>
+              <div class="product-title">Premium Tin Container candle (pack of 4)</div>
+            </div>
+          </div>
+        </div>
+
+<!--pro2-->
+<div class="swiper-slide">
+  <div class="product-card">
+    <img src="pro2.jpg" alt="">
+    <div class="product-content">
+      <div class="category">CELEBRATION</div>
+      <div class="product-title">Premium Tin container Candle (pack of 2)</div>
+    </div>
+  </div>
+</div>
+
+<!--pro3-->
+
+<div class="swiper-slide">
+  <div class="product-card">
+    <img src="pro3.jpg" alt="">
+    <div class="product-content">
+      <div class="category">CELEBRATION</div>
+      <div class="product-title">Celebrate 5 Day of Diwali (pack of 5)</div>
+    </div>
+  </div>
+</div>
+
+<!--pro4-->
+<div class="swiper-slide">
+  <div class="product-card">
+    <img src="pro4.jpg" alt="">
+    <div class="product-content">
+      <div class="category">CELEBRATION</div>
+      <div class="product-title">Celebrate 5 Day of Diwali (pack of 5)</div>
+    </div>
+  </div>
+</div>
+
+<!--pro5-->
+<div class="swiper-slide">
+  <div class="product-card">
+    <img src="pro5.jpg" alt="">
+    <div class="product-content">
+      <div class="category">CELEBRATION</div>
+      <div class="product-title">Celebrate 5 Day of Diwali (pack of 5)</div>
+    </div>
+  </div>
+</div>
+
+<!--pro6-->
+
+<div class="swiper-slide">
+  <div class="product-card">
+    <img src="pro6.jpg" alt="">
+    <div class="product-content">
+      <div class="category">CELEBRATION</div>
+      <div class="product-title">Celebrate 5 Day of Diwali (pack of 5)</div>
+    </div>
+  </div>
+</div>
+
+<!--pro7-->
+
+<div class="swiper-slide">
+  <div class="product-card">
+    <img src="pro7.jpg" alt="">
+    <div class="product-content">
+      <div class="category">CELEBRATION</div>
+      <div class="product-title">Celebrate 5 Day of Diwali (pack of 5)</div>
+    </div>
+  </div>
+</div>
+
+<!--pro8-->
+
+<div class="swiper-slide">
+  <div class="product-card">
+    <img src="pro8.jpg" alt="">
+    <div class="product-content">
+      <div class="category">CELEBRATION</div>
+      <div class="product-title">Celebrate 5 Day of Diwali (pack of 5)</div>
+    </div>
+  </div>
+</div>
+
+<!--pro9-->
+
+
+<div class="swiper-slide">
+  <div class="product-card">
+    <img src="pro9.jpg" alt="">
+    <div class="product-content">
+      <div class="category">CELEBRATION</div>
+      <div class="product-title">Celebrate 5 Day of Diwali (pack of 5)</div>
+    </div>
+  </div>
+</div>
+
+<!--pro10-->
+
+<div class="swiper-slide">
+  <div class="product-card">
+    <img src="pro10.jpg" alt="">
+    <div class="product-content">
+      <div class="category">CELEBRATION</div>
+      <div class="product-title">Celebrate 5 Day of Diwali (pack of 5)</div>
+    </div>
+  </div>
+</div>
+
+<!--pro11-->
+
+<div class="swiper-slide">
+  <div class="product-card">
+    <img src="pro11.jpg" alt="">
+    <div class="product-content">
+      <div class="category">CELEBRATION</div>
+      <div class="product-title">Celebrate 5 Day of Diwali (pack of 5)</div>
+    </div>
+  </div>
+</div>
+
+<!--pro12-->
+
+<div class="swiper-slide">
+  <div class="product-card">
+    <img src="pro12.jpg" alt="">
+    <div class="product-content">
+      <div class="category">CELEBRATION</div>
+      <div class="product-title">Celebrate 5 Day of Diwali (pack of 5)</div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+<div class="swiper-button-prev"></div>
+<div class="swiper-button-next"></div>
+</div>
+</section>
+
+
+<!--UNIQUE FEATURES-->
+
+<section class="unique-section ">
+  <div class="unique-container">
+
+    <div class="unique-subtitle">WHAT MAKES US UUNIQUE</div>
+    <h2 class="unique-title">Candles That Complement Your home</h2>
+    <p class="unique-text">
+
+         Our candles are crafted with premium 100% soy wax, clean fragrances, and eco-friendly wicks,
+      designed to elevate your space with warmth and luxury.
+      </p>
+
+      <div class="unique-features">
+
+        <div class="feature-item">
+          <img src="non-toxic.png" alt="">
+          <p>NON TOXIC</p>
+        </div>
+
+        <div class="feature-item">
+          <img src="non-smoky.png" alt="">
+          <p>NON SMOKY</p>
+        </div>
+      
+        <div class="feature-item">
+          <img src="cotton-wick.png" alt="">
+          <p>COOTON WICK</p>
+        </div>
+
+        <div class="feature-item">
+          <img src="organic-aroma.png" alt="">
+          <p>ORGANIC AROMA</p>
+        </div>
+
+        <div class="feature-item">
+          <img src="NATURAL-SCENT.png" alt="">
+          <p>NATURAL SCENT</p>
+        </div>
+
+        <div class="feature-item">
+          <img src="REUSABLE-JAR.png" alt="">
+          <p>REUSABLE JAR</p>
+        </div>
+</div>
+</div>
+</section>
+
+<!--FAQ-Section-->
+
+<section class="faq-wrapper py-5">
+  <div class="container">
+    <h2 class="text-center mb-5 faq-title">FAQs</h2>
+
+    <div class="row g-4">
+
+      <!--LEFT COLUMN-->
+
+      <div class="col-lg-6">
+        <h3 class="faq-heading">Candle FAQs</h3>
+
+        <div class="custom-accordion">
+
+          <!--Item 1-->
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>
+
+                <i class="fa-solid fa-circle-check"></i>
+                Which is the best place to store candles?</span>
+                
+              <i class="toggle-icon fa-solid fa-plus"></i>
+            </button>
+
+            <div class="faq-answer ">
+              Candles burn best in still air .Draughts can cause a candle to smoke,
+              soot or burn unevenly.Make sure to place them away from open windows and doors.
+            </div>
+          </div>
+
+          <!--Item2-->
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>
+
+                <i class="fa-solid fa-circle-check"></i>
+                Should I trim the wick ?</span>
+               
+
+              <i class="toggle-icon fa-solid fa-plus"></i>
+            </button>
+
+            <div class="faq-answer">
+Looking after the wick of your candle is extremely important! Before lighting, always ensure your candle wick is trimmed to approximately 5mm.
+
+By trimming the wick it will remove any clubbing the build-up of carbon that can be visible at the end of a wick, prevent the candle from sooting  black marks that will form around the edge of the candle glass, ensure better scent diffusion and prevent high flames which are unsafe.            </div>
+          </div>
+
+          <!--Item 3-->
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>
+                <i class="fa-solid fa-circle-check"></i>
+                What is candle memory ?</span>
+                
+
+              <i class="toggle-icon fa-solid fa-plus"></i>
+           </button>
+           <div class="faq-answer">
+          To maximize the lifespan of your candle, you will need to set the candle memory. The size of the wax pool on the first burn sets the memory for the lifetime of the candle. When you light your candle for the first time do not extinguish it until an even wax pool reaching the edge of the glass has formed. This can take between 3-4 hours. Your candle will then burn evenly all the way down. If you extinguish your candle before a complete wax pool has been formed, you may experience “tunnelling” and you will be left with a perimeter of unburned wax.
+           </div>
+          </div>
+
+          <!--Item  4-->
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>
+                <i class="fa-solid fa-circle-check"></i>
+                What is the best way to extinguish a candle ?</span>
+              
+
+              <i class="toggle-icon fa-solid fa-plus"></i>
+            </button>
+            <div class="faq-answer">
+              Always use a candle snuffer to extinguish the flame. Blowing out your candle is not recommended as the molten wax can splatter and the wick may continue to glow and emit smoke.
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!--Right column-->
+    <div class="col-lg-6">
+      <h3 class="faq-heading">Candle safety Tips</h3>
+
+      <div class="custom-accordion">
+
+        <!--Item 1-->
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>
+              <i class="fa-solid fa-circle-check"></i>
+              Before burning the candle</span>
+            
+
+            <i class="toggle-icon fa-solid fa-minus"></i>
+          </button>
+
+          <div class="faq-answer show">
+            <ul>
+              <li>. Do not burn if the glass is cracked or damaged.</li>
+              <li>. Ensure the candle wax pool is clear of debris prior to burning.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!--Item 2-->
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>
+              <i class="fa-solid fa-circle-check"></i>
+              While burning the candle</span>
+             
+            <i class="toggle-icon fa-solid fa-minus"></i>
+          </button>
+
+          <div class="faq-answer show">
+            <ul>
+              <li>Never leave a burning candle unattended.</li>
+<li>Burn your candle out of the reach of children and pets.</li>
+<li>Do not burn candles on or near anything that can catch fire.</li>
+<li>Do not place your candle on or near a source of heat.</li>
+<li>Do not burn candles while next to walls, windows, or below overhanging objects.</li>
+<li>Allow ample headroom for the candle to burn. Ensure the candle remains upright on a secure, heat-resistant surface.</li>
+<li>Always leave at least 15cm gap between burning candles.</li>
+<li>Keep wicks trimmed to 5mm (and evenly spaced) at all times to avoid smoking.</li>
+<li>Trim excess wax from pillar candles to ensure an even burn.</li>
+<li>Never allow the flame to touch the side of the glass.</li>
+<li>Never move a candle while burning.</li>
+<li>Allow the wax pool to solidify completely before moving or relighting the candle</li>
+            </ul>
+
+          </div>
+        </div>
+   <!--Item 3--> 
+   
+   <div class="faq-item">
+    <button class="faq-question" type="button">
+      <span>
+        <i class="fa-solid fa-circle-check"></i>
+        While extinguishing the candle </span>
+      
+      <i class="toggle-icon fa-solid fa-minus"></i>
+    </button>
+    <div class="faq-answer show">
+      <ul>
+        <li>Always use a candle snuffer to extinguish the flame as blowing out your candle can cause the molten wax to splatter and the wick may continue to glow and emit smoke.</li>
+<li>Always stop burning your candle when 10mm of wax remains at the bottom.</li>
+<li>Extinguish the flame if it flickers, smokes or the flame gets too high.</li>
+      </ul>
+
+    </div>
+   </div>
+
+      </div>
+    </div>
+    
+    
+    </div>
+  </div>
+</section>
+
+<!--FEATURE STRIP SECTION-->
+
+<section class="feature-strip">
+
+  <div class="fs-item">
+    <img src="post-sale.webp">
+    <div>
+
+      <h4>Post-sale Support</h4>
+      <p>Reach out to us for queries </p>
+    </div>
+  </div>
+
+  <div class="fs-item">
+    <img src="pan-indian.png">
+    <div>
+      <h4>Pan India shipping</h4>
+      <p>In 7 business days</p>
+    </div>
+  </div>
+
+  <div class="fs-item">
+    <img src="product-offer.webp">
+    <div>
+      <h4>Product Offers</h4>
+      <p>Offers on selective products</p>
+    </div>
+  </div>
+
+  <div class="fs-item">
+    <img src="finest-quality.webp">
+  
+<div>
+  <h4>Finest Quality Assured</h4>
+</div>  
+</div>
+
+<!--GREEN FOOTER-->
+
+<footer class="green-footer">
+  
+  <div class=" gf-container">
+
+    <div class="gf-logo">
+      <img src="taracandles.avif" alt="Logo">
+    </div>
+
+    <div class="gf-col">
+      <h3>Quick Links</h3>
+      <a href="#">About Us </a>
+      <a href="#">Press & Media</a>
+      <a href="#">Testimonials</a>
+      <a href="#">Blogs</a>
+      <a href="#">Events</a>
+      <a href="#">FAQ</a>
+    </div>
+
+    <div class="gf-col">
+      <h3>Products</h3>
+      <a href="#">Collection</a>
+      <a href="#">Fragrance by Mood</a>
+      <a href="#">Fragrance by Room</a>
+      <a href="#">Essential Kits</a>
+    </div>
+
+    <div class="gf-col">
+      <h3>Support</h3>
+      <a href="#">Terms of service</a>
+      <a href="#">Shipping Policy</a>
+      <a href="#">Refund Policy</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Sitemap</a>
+    </div>
+
+    <div class="gf-col">
+      <h3>Connect</h3>
+      <p><strong>Sales & Support:</strong>+91 81041 48660</p>
+      <p><strong>Email:</strong>customercare@taraglobal.in</p>
+      <a href="#">Track order</a>
+      <a href="#">Conatct Us</a>
+
+      <h3 style="margin-top: 20px;">Social link</h3>
+      <div class="gf-social">
+        <a href="#"><img src="ig.webp"></a>
+        <a href="#"><img src="fb.jpg"></a>
+      </div>
+    </div>
+  </div>
+
+  <!--WHATSAPP-->
+  <a href="https://wa.me/919999999999" class="footer-whatsapp" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+  </a>
+
+  <!--Bulk order-->
+  <div class="bulk-order-stick">BULK ORDER</div>
+</footer>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </section>
+
+
 
 
 
@@ -615,7 +1462,9 @@
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
- <script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<script>
   const track=document.getElementById("heritageTrack");
   const originalCards=Array.from(track.children);
   
@@ -671,6 +1520,86 @@ function restartAutoplay(){
   clearInterval(autoplay);
   autoplay=setInterval(slideNext,3000);
 }
+
+var swiper=new Swiper(".myFeaturedSwiper",{
+  slidesPerView:4,
+  spaceBetween:30,
+  loop:true,
+  navigation: {
+    nextEl:".swiper-button-next",
+    prevEl:".swiper-button-prev",
+  },
+  autoplay:{
+    delay:1800,
+    disableOnInteraction:false,
+  },
+
+  breakpoints:{
+    delay:1800,
+    disableOnInteraction:false,
+  },
+
+
+});
+
+document.querySelectorAll(".faq-question").forEach(question=>{
+  question.addEventListener("click",()=> {
+
+    const answer=question.nextElementSibling;
+    const icon=question.querySelector(".toggle-icon");
+
+    document.querySelectorAll(".faq-answer").forEach(a=> {
+      if (a !==answer) a.classList.remove("show");
+     });
+
+    document.querySelectorAll(".toggle-icon").forEach(i=> {
+      if (i !==icon) {
+        i.classList.remove("fa-minus","rotate");
+        i.classList.add("fa-plus");
+      }
+    });
+
+ answer.classList.toggle("show");
+
+ if (answer.classList.contains("show")) {
+  icon.classList.remove("fa-plus");
+  icon.classList.add("fa-minus","rotate");
+ } else {
+ icon.classList.remove("fa-minus","rotate");
+ icon.classList.add("fa-plus");
+
+}
+
+  });
+});
 </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
